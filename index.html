@@ -1,84 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publicación</title>
-
-  <link href="publication-web-resources/css/main.css" rel="stylesheet" type="text/css">
-
-  <script src="publication-web-resources/script/main.js" defer></script>
-
-  <style>
-    /* Estilos responsivos mínimos */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .contentIframeClass {
-      width: 100%;
-      height: 100%;
-      border: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .dummyFrameClass {
-      display: none;
-    }
-
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      font-weight: bold;
-      color: black;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      line-height: 40px;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .prev {
-      left: 20px;
-    }
-
-    .next {
-      right: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .prev, .next {
-        font-size: 3rem;
-        width: 32px;
-        height: 32px;
-        line-height: 32px;
-      }
-    }
-  </style>
-</head>
-<body onload="showHideArrows()">
-  <iframe onload="showHideArrows()" id="contentIFrame" class="contentIframeClass"
-          src="publication-web-resources/html/publication.html">
-  </iframe>
-
-  <iframe id="dummyIFrame" class="dummyFrameClass"></iframe>
-
-  <div class="prev" onclick="showPreviousPage()" role="button" aria-label="Página anterior">
-    &#10094;
-  </div>
-  <div class="next" onclick="showNextPage()" role="button" aria-label="Página siguiente">
-    &#10095;
-  </div>
-</body>
+<html>
+	<head>
+		<link href="publication-web-resources/css/main.css" rel="stylesheet" type="text/css">
+		</link>
+		<script src="publication-web-resources/script/main.js" type="text/javascript">
+		</script>
+	</head>
+	<body onload="showHideArrows()">
+		<iframe onload="showHideArrows()" id="contentIFrame" class="contentIframeClass" src="publication-web-resources/html/publication.html">		</iframe>
+		<iframe id="dummyIFrame" class="dummyFrameClass">		</iframe>
+		<div class="prev" onclick="showPreviousPage()">		&#10094;		</div>
+		<div class="next" onclick="showNextPage()">		&#10095;		</div>
+	</body>
 </html>
